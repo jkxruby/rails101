@@ -1,19 +1,20 @@
 <div class="col-md-12">
-
-  <h2 class="text-center"> 我加入的讨论版 </h2>
-
-  <table class="table">
+  <div class="group">
+    <%= link_to("New group", new_group_path, class: "btn btn-primary pull-right") %>
+  </div>
+  <table class="table table-hover">
     <thead>
       <tr>
-        <th> # </th>
-        <th> Title </th>
-        <th> Description </th>
-        <th> Post Count </th>
-        <th> Last Update </th>
+        <td>#</td>
+        <td>Title</td>
+        <td>Description</td>
+        <td>Creator </td>
       </tr>
     </thead>
     <tbody>
-    <%= render :partial => "group_item", :collection => @groups, :as => :group %>
+
+
+      <%= render :partial => "group_item", :collection => @groups, :as => :group %>
 
     </tbody>
   </table>
